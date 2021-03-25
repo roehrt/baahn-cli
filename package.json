@@ -1,0 +1,24 @@
+{
+  "name": "baahn-cli",
+  "version": "1.0.0",
+  "description": "A simple CLI wrapper for baahn",
+  "main": "src/index.js",
+  "dependencies": {
+    "@roehrt/baahn": "^1.0.2",
+    "chalk": "^4.1.0",
+    "db-hafas": "^5.0.2",
+    "inquirer": "^7.3.3",
+    "inquirer-autocomplete-prompt": "^1.2.0",
+    "inquirer-datepicker": "^2.0.0",
+    "node-emoji": "^1.10.0",
+    "ora": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0"
+  },
+  "author": "Tobias Roehr",
+  "license": "MIT",
+  "bin": {
+    "baahn": "src/index.js"
+  }
+}

@@ -1,0 +1,9 @@
+# npm
+node_modules
+build
+npm-debug.log
+.env
+
+# IDE
+.idea
+.vscode
