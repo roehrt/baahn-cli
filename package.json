@@ -1,5 +1,5 @@
 {
-  "name": "baahn-cli",
+  "name": "@roehrt/baahn-cli",
   "version": "1.0.0",
   "description": "A simple CLI wrapper for baahn",
   "main": "src/index.js",
