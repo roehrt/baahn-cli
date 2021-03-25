@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "A simple CLI wrapper for baahn",
   "main": "src/index.js",
+  "author": "Tobias Roehr",
+  "license": "ISC",
+  "files": [
+    "src/"
+  ],
+  "repository": "git://github.com/roehrt/baahn-cli.git",
   "dependencies": {
     "@roehrt/baahn": "^1.0.2",
     "chalk": "^4.1.0",
@@ -16,8 +22,6 @@
   "devDependencies": {
     "eslint": "^7.11.0"
   },
-  "author": "Tobias Roehr",
-  "license": "MIT",
   "bin": {
     "baahn": "src/index.js"
   }
