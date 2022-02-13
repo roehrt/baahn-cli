@@ -1,10 +1,11 @@
-# Baahn-CLI
+# Baahn-CLI 🧑‍💻
 
-Simple cli wrapper for [`baahn`]
+Simple cli wrapper for [`baahn`] 🚂.
 
 ## Installation
-Switch the registry to `https://npm.pkg.github.com` by adding these
-lines to your `.npmrc`. Currently, you will need an access token to install this package.
+Currently, you need an access token to install this package 😔.
+If you have one, add the GitHub Package registry (where this package
+is published) to your `.npmrc`.
 ```
 @roehrt:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=<your token>
