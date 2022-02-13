@@ -2,6 +2,8 @@
 
 Simple cli wrapper for [`baahn`] 🚂.
 
+![baahn-cli in action](cli.png)
+
 ## Installation
 Currently, you need an access token to install this package 😔.
 If you have one, add the GitHub Package registry (where this package
