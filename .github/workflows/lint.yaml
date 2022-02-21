@@ -1,4 +1,4 @@
-name: Lint and build source
+name: Lint and build baahn-cli
 
 on: [push, pull_request]
 
