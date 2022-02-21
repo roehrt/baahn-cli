@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "lint": "eslint --fix --ext .ts .",
-    "build": "tsc",
+    "build": "tsc && printf '%s\\n%s\\n' \"#!/usr/bin/env node\n\" \"$(cat dist/index.js)\" > dist/index.js",
     "prepare": "npm run build"
   },
   "repository": "git://github.com/roehrt/baahn-cli.git",
@@ -45,6 +45,6 @@
     "typescript": "^4.5.5"
   },
   "bin": {
-    "baahn": "src/index.ts"
+    "baahn": "dist/index.js"
   }
 }
