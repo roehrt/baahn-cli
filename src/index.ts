@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 import ora from 'ora';
 import chalk from 'chalk';
 import { findJourneys } from '@roehrt/baahn';
@@ -6,7 +7,7 @@ import { findJourneys } from '@roehrt/baahn';
 import * as questions from './lib/questions';
 import { formatJourneys } from './lib/format';
 
-const packageInfo = JSON.parse(fs.readFileSync('../package.json', 'utf-8'));
+const packageInfo = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf-8'));
 
 if (require.main === module) {
   console.log(chalk.gray(`${packageInfo.name}@${packageInfo.version}`));
