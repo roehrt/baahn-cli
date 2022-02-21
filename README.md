@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Baahn CLI in action" src="baahn-cli.png">
+  <img alt="Baahn CLI in action" src="https://github.com/roehrt/baahn-cli/blob/main/baahn-cli.png?raw=true">
 </p>
 
 # Baahn-CLI 🧑‍💻
