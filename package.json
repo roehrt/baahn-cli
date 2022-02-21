@@ -5,6 +5,12 @@
   "main": "dist/index.js",
   "author": "Tobias Roehr",
   "license": "ISC",
+  "keywords": [
+    "deutsche bahn",
+    "cli",
+    "transit",
+    "germany"
+  ],
   "files": [
     "src/",
     "dist/"
