@@ -1,6 +1,9 @@
 # output dir
 dist
 
+# tarballs
+*.tgz
+
 # npm
 node_modules
 build
