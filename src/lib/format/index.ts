@@ -32,7 +32,7 @@ function formatJourney(journey: BaahnJourney): BaahnFormatString[] {
     }
     if (journey.trick.prepend.length > 0) {
       lines.push(NEWLINE);
-      lines.push([chalk.bold('Reise beginnen')]);
+      lines.push([chalk.bold('Start journey here')]);
       lines.push(NEWLINE);
     }
   }
@@ -44,7 +44,7 @@ function formatJourney(journey: BaahnJourney): BaahnFormatString[] {
   if (journey.trick) {
     if (journey.trick.append.length > 0) {
       lines.push(NEWLINE);
-      lines.push([chalk.bold('Reise beenden')]);
+      lines.push([chalk.bold('End journey here')]);
       lines.push(NEWLINE);
     }
     for (const leg of journey.trick.append) {
