@@ -1,14 +1,16 @@
-#!/usr/bin/env node
+import fs from 'fs';
+import ora from 'ora';
+import chalk from 'chalk';
+import { findJourneys } from '@roehrt/baahn';
 
-const { findJourneys } = require('@roehrt/baahn');
-const ora = require('ora');
-const chalk = require('chalk');
-const packageInfo = require('../package.json');
-const questions = require('./lib/questions');
-const formatJourneys = require('./lib/format');
+import * as questions from './lib/questions';
+import { formatJourneys } from './lib/format';
+
+const packageInfo = JSON.parse(fs.readFileSync('../package.json', 'utf-8'));
 
 if (require.main === module) {
   console.log(chalk.gray(`${packageInfo.name}@${packageInfo.version}`));
+
   questions.ask().then(async (answers) => {
     let spinner = ora('Parse parameters').start();
     try {
@@ -19,18 +21,18 @@ if (require.main === module) {
         text: 'Search journeys',
         color: 'yellow',
       }).start();
-      const response = await findJourneys(from, to, opt);
+      const journeys = await findJourneys(from, to, opt);
       spinner.succeed();
 
       spinner = ora({
         text: 'Format journeys',
         color: 'green',
       }).start();
-      const output = formatJourneys(response);
+      const formatted = formatJourneys(journeys);
       spinner.succeed();
-      console.log(output);
+      console.log(formatted);
     } catch (e) {
-      spinner.fail(e.message);
+      if (e instanceof Error) spinner.fail(e.message);
     }
   }).catch((e) => console.error(`Failed with: ${e.message}`));
 }
